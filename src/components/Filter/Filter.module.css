@@ -1,0 +1,21 @@
+.filterBox {
+   display: flex;
+   flex-direction: column;
+   padding: 16px 0px ;
+   font-size: 18px;
+   color: #555;
+}
+
+.filterBtn {
+   margin: 16px auto;
+   width: 528px;
+   height: 32px;
+}
+
+.filterBtn:hover {
+   border: 1px solid #f0f;
+}
+
+.filterBtn:active {
+   border: 1px solid #f0f;
+}

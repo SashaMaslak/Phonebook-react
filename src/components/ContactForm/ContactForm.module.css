@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 32px;
+}
+.form__input {
+  width: 256px;
+  height: 32px;
+}
+
+.form__btn {
+min-width: 528px;
+height: 32px;
+border-radius: 8px;
+font-size: 16px;
+font-weight: bold;
+}
+
+.form__btn:hover {
+  background-color: #f0f;
+}
+
+.form__input:hover {
+  border: 1px solid #f0f;
+}

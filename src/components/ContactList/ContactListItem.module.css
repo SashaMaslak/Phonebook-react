@@ -1,0 +1,27 @@
+.contactList__item {
+   display: flex;
+   width: 512px;
+   /* justify-content: start; */
+   align-items: center;
+   gap: 8px;
+   margin-bottom: 16px;
+   font-size: 20px;
+}
+.contactList__name {
+   /* margin-right: 20px; */
+}
+
+.contactList__number {
+   margin-left: 8px;
+}
+
+.contactList__DeleteBtn {
+   margin-left: 16px;
+   border-radius: 4px;
+   width: 64px;
+   height: 32px;
+}
+
+.contactList__DeleteBtn:hover {
+   background-color: #f0f;
+}
