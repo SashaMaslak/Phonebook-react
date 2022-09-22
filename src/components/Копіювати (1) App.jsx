@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact, deleteContact } from 'redux/contactsSlice';
-import { filterContact } from 'redux/filterSlice';
+import { addContact, deleteContact, filterContact } from 'redux/store';
+// import { addContact, deleteContact } from 'redux/contactsSlice';
+// import { filterContact } from 'redux/filterSlice';
 import { theme } from 'theme';
 import { Box } from './Box';
 import { Section } from './Section/Section';
@@ -21,17 +22,21 @@ import { filterContacts } from 'helpers/filterContacts';
 
 export function App() {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.initialContacts);
   const filter = useSelector(state => state.filter);
+
+
+  console.log(filter);
+    // console.log(contacts);
 
   // const [contacts, setContacts] = useState(
   //   JSON.parse(window.localStorage.getItem('contacts')) ?? initialContacts
   // );
   // const [filter, setFilter] = useState('');
 
-  useEffect(() => {
-    window.localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
+  // useEffect(() => {
+  //   window.localStorage.setItem('contacts', contacts);
+  // }, [contacts]);
 
   // const handleAddContact = contact => {
   //   if (contacts.some(cont => cont.name === contact.name)) {
@@ -42,7 +47,6 @@ export function App() {
   // };
 
   const handleAddContact = contact => {
-    console.log(contact);
     dispatch(addContact(contact));
   };
 
