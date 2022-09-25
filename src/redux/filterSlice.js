@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useSelector } from "react-redux";
 
 export const filterSlice = createSlice({
    name: "filter",
@@ -11,3 +12,6 @@ export const filterSlice = createSlice({
 });
 
 export const { filterContact } = filterSlice.actions;
+
+export const GetFilter = () => useSelector(state => state.filter);
+
