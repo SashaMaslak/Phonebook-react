@@ -1,6 +1,5 @@
 import defaultContacts from "../components/ContactList/initialContacts.json";
 import { createSlice } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
 
 const storageCntacts = JSON.parse(window.localStorage.getItem('contacts'));
 const initialContacts = storageCntacts ?? defaultContacts;
@@ -19,5 +18,3 @@ export const contactsSlice = createSlice({
 });
 
 export const { addContact, deleteContact } = contactsSlice.actions;
-
-export const GetContacts = () => useSelector(state => state.contacts);

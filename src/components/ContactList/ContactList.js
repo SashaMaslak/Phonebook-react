@@ -1,17 +1,17 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
 import PropTypes from 'prop-types';
 import { ContactListItem } from "./ContactListItem";
 import css from './ContactList.module.css';
-import { GetContacts } from 'redux/contactsSlice';
-import { GetFilter } from 'redux/filterSlice';
+import { getContacts } from 'redux/selectors';
+import { getFilter } from 'redux/selectors';
 
 // helpers
 import { filterContacts } from 'helpers/filterContacts';
 
 export function ContactList() {
-   const contacts = GetContacts();
-   const filter = GetFilter();
+   const contacts = useSelector(getContacts);
+   const filter = useSelector(getFilter);
    const filteredContacts = filterContacts(contacts, filter);
    const dispatch = useDispatch();
    const handleDeleteContact = id => {
