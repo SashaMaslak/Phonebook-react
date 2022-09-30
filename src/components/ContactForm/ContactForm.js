@@ -6,11 +6,11 @@ import shortid from 'shortid';
 import css from './ContactForm.module.css';
 
 export function ContactForm() {
-  const contacts = useSelector(getContacts);
-  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-
+  const dispatch = useDispatch();
+  const contacts = useSelector(getContacts);
+  
    const handleChangeInputName = ({target: { value }}) => {
     setName(value);
   };
@@ -35,7 +35,7 @@ export function ContactForm() {
       number,
       id: shortid.generate(),
     };
-
+    
     dispatch(addContact(contact));
     reset();
   };

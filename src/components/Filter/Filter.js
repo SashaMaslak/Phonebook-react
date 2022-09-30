@@ -1,4 +1,4 @@
-import { filterContact } from 'redux/filterSlice';
+import { updateFilter } from 'redux/contactsSlice';
 import { useDispatch } from 'react-redux';
 import css from './Filter.module.css';
 
@@ -6,7 +6,7 @@ export function Filter() {
    const dispatch = useDispatch();
 
    const setFilterValue = ({ target: { value } }) => {
-      dispatch(filterContact(value));
+      dispatch(updateFilter(value));
    };
 
    return (
