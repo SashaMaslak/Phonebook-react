@@ -1,5 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/contactsSlice';
+import { useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
 import { getFilter } from 'redux/selectors';
 import PropTypes from 'prop-types';
@@ -13,13 +12,9 @@ import { filterContacts } from 'helpers/filterContacts';
 export function ContactList() {
    const contacts = useSelector(getContacts);
    const filter = useSelector(getFilter);
-   const dispatch = useDispatch();
    
    const filteredContacts = filterContacts(contacts, filter);
    
-   const handleDeleteContact = id => {
-      dispatch(deleteContact(id));
-   };
    return (
       <ul className={css.contactList}>
          {filteredContacts.map(({ id, name, number }) => {
@@ -29,7 +24,7 @@ export function ContactList() {
                   id={id}
                   name={name}
                   number={number}
-                  handleDeleteContact={handleDeleteContact} />
+               />
             );
          })}
       </ul>

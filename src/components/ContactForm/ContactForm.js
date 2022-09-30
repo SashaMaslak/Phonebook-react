@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+// import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { getContacts } from 'redux/selectors';
-import shortid from 'shortid';
 import css from './ContactForm.module.css';
 
 export function ContactForm() {
@@ -33,8 +33,8 @@ export function ContactForm() {
     const contact = {
       name,
       number,
-      id: shortid.generate(),
     };
+    
     
     dispatch(addContact(contact));
     reset();

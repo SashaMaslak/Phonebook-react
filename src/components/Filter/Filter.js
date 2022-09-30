@@ -12,10 +12,10 @@ export function Filter() {
    return (
       <div className={css.filterBox}>
          <p>Find contacts by name</p>
-      <input
-      className={css.filterBtn}
-      type="text"
-      placeholder="filter name"
+         <input
+            className={css.filterBtn}
+            type="text"
+            placeholder="filter name"
             onChange={setFilterValue} />
       </div>)
 }
