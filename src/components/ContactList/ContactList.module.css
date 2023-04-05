@@ -1,3 +1,46 @@
 .contactList {
-   list-style: circle;
+   display: flex;
+   flex-direction: column;
+   background-color: #A9A9A9;
+   border-radius: 8px;
+   padding: 32px;
 }
+
+.contactList__Btn:hover {
+  background-color: #a9a9a9;
+}
+
+.table {
+   width: 100%;
+   margin: 8px 0px;
+   text-align: center;
+   border-collapse: separate;
+   
+}
+
+.rowHead {
+   background-color: #FFA07A;
+}
+
+.rowHeadItem {
+  border: 1px solid #FFA07A;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.row {
+  color: #2a2a2a;
+}
+
+.row:nth-child(even) {
+    background-color: #eee;
+  }
+
+.row:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  .rowItem {
+   border: 1px solid #ddd;
+   padding: 4px;
+  }

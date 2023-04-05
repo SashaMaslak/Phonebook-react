@@ -2,27 +2,30 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: auto;
-  padding: 32px;
+  padding: 8px;
 }
 .form__input {
   width: 256px;
   height: 32px;
+  border: 2px solid #000;
+  border-radius: 8px;
 }
 
 .form__btn {
-min-width: 528px;
+min-width: 256px;
 height: 32px;
 border-radius: 8px;
 font-size: 16px;
 font-weight: bold;
+border: 2px solid #000;
 }
 
-.form__btn:hover {
-  background-color: #f0f;
+.form__btn:hover, .form__btn:active {
+  background-color: #FFA07A;
 }
 
-.form__input:hover {
-  border: 1px solid #f0f;
+.form__input:hover, .form__input:active {
+  border: 2px solid #FFA07A;
 }

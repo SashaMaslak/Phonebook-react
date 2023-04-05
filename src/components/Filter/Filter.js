@@ -11,13 +11,13 @@ export function Filter() {
 
   return (
     <div className={css.filterBox}>
-      <p>Find contacts by name</p>
       <input
         className={css.filterBtn}
         type="text"
-        placeholder="filter name"
+        placeholder="filter by name"
         onChange={setFilterValue}
       />
+      <p style={{ color: '#000' }}>Find contacts by name</p>
     </div>
   );
 }

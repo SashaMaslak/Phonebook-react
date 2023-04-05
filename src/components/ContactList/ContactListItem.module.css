@@ -1,7 +1,7 @@
 .contactList__item {
    display: flex;
    width: 512px;
-   /* justify-content: start; */
+   list-style: disc;
    align-items: center;
    gap: 8px;
    margin-bottom: 16px;
@@ -23,5 +23,5 @@
 }
 
 .contactList__DeleteBtn:hover {
-   background-color: #f0f;
+   background-color: #FFA07A;
 }

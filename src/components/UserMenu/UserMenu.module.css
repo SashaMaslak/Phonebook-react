@@ -2,8 +2,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 6px;
 }
 
 .username {
   font-weight: 700;
+}
+
+.userBtn:hover {
+background-color: #a9a9a9;
 }

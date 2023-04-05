@@ -1,0 +1,33 @@
+.table {
+   width: 480px;
+        margin: 8px 0px;
+        text-align: center;
+        border-collapse: collapse;
+}
+
+.rowHead {
+   background-color: #07c;
+   color: #fff;
+}
+
+.rowHeadItem {
+  border: 1px solid #07c;
+  padding: 8px;
+}
+
+.row {
+  color: #2a2a2a;
+}
+
+.row:nth-child(even) {
+    background-color: #eee;
+  }
+
+.row:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  .rowItem {
+   border: 1px solid #ddd;
+   padding: 4px;
+  }

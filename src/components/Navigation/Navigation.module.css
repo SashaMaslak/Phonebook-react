@@ -7,5 +7,9 @@
 }
 
 .link.active {
-  color: #e84a5f;
+  color: black;
+}
+
+.link:hover {
+font-size: 17px;
 }
