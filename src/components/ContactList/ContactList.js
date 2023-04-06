@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { selectContacts } from 'redux/contacts/selectors';
 import { selectFilter } from 'redux/contacts/selectors';
-import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
@@ -59,11 +58,7 @@ export function ContactList() {
                   />
                 }
                 {modalActive && (
-                  <ModalEditContact
-                    active={modalActive}
-                    setActive={setModalActive}
-                    id={currentId}
-                  />
+                  <ModalEditContact setActive={setModalActive} id={currentId} />
                 )}
               </td>
               <td width="110" className={css.rowItem}>
@@ -81,13 +76,3 @@ export function ContactList() {
     </>
   );
 }
-
-ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ),
-};

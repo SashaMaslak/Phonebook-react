@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { changeContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selectors';
 import { IoMdClose } from 'react-icons/io';
 import css from './ModalEditContact.module.css';
 
-const ModalEditContact = ({ active, setActive, id }) => {
+const ModalEditContact = ({ setActive, id }) => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
@@ -13,9 +14,6 @@ const ModalEditContact = ({ active, setActive, id }) => {
 
   const [nameValue, setNameValue] = useState(user.name);
   const [numberValue, setNumberValue] = useState(user.number);
-
-  // console.log(nameValue);
-  // console.log(numberValue);
 
   const handleChangeInputName = ({ target: { value } }) => {
     setNameValue(value);
@@ -105,3 +103,8 @@ const ModalEditContact = ({ active, setActive, id }) => {
 };
 
 export default ModalEditContact;
+
+ModalEditContact.propTypes = {
+  id: PropTypes.string.isRequired,
+  setActive: PropTypes.func.isRequired,
+};
