@@ -2,6 +2,9 @@ const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
     display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    alignItems: 'center',
   },
   title: {
     fontWeight: 500,
@@ -12,7 +15,8 @@ const styles = {
 export default function Home() {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Page Home</h1>
+      <h1 style={styles.title}>Phonebook</h1>
+      <p>Use this applicaton for your live</p>
     </div>
   );
 }

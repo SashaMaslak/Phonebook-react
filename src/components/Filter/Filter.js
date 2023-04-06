@@ -17,7 +17,7 @@ export function Filter() {
         placeholder="filter by name"
         onChange={setFilterValue}
       />
-      <p style={{ color: '#000' }}>Find contacts by name</p>
+      <p style={{ color: '#000' }}> Find contacts by name</p>
     </div>
   );
 }

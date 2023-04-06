@@ -7,7 +7,9 @@
 }
 
 .contactList__Btn:hover {
-  background-color: #a9a9a9;
+  cursor: pointer;
+  font-size: 120%;
+  color: #FFA07A;
 }
 
 .table {
@@ -43,4 +45,5 @@
   .rowItem {
    border: 1px solid #ddd;
    padding: 4px;
+   height: 36px;
   }

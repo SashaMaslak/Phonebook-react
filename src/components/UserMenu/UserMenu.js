@@ -3,6 +3,7 @@ import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
 import defaultAvatar from './default-avatar.png';
 import css from './UserMenu.module.css';
+import { FiLogOut } from 'react-icons/fi';
 
 const styles = {
   avatar: {
@@ -19,13 +20,13 @@ export const UserMenu = () => {
     <div className={css.wrapper}>
       <img src={avatar} alt="" width="32" style={styles.avatar} />
       <p className={css.username}>Welcome, {user.name}</p>
-      <button
+      <FiLogOut
         className={css.userBtn}
         type="button"
         onClick={() => dispatch(logOut())}
       >
         Logout
-      </button>
+      </FiLogOut>
     </div>
   );
 };
