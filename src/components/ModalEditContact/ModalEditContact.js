@@ -24,15 +24,6 @@ const ModalEditContact = ({ setActive, id }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const allContacts = contacts.reduce((acc, contact) => {
-      acc.push(contact.name.toLocaleLowerCase());
-      return acc;
-    }, []);
-
-    if (allContacts.includes(nameValue.toLocaleLowerCase())) {
-      alert(`${nameValue} already in contacts.`);
-      return;
-    }
 
     const contact = {
       id,
