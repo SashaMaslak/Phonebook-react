@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <div style={styles.container}>
         <h1 style={styles.title}>Phonebook</h1>
-        <p>Use this applicaton for your live</p>
+        <p>Use this applicaton for your beautiful life</p>
       </div>
     </>
   );
