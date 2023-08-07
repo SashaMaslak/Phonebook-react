@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-08-phonebook",
+  "name": "Phonebook-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://SashaMaslak.github.io/goit-react-hw-08-phonebook",
+  "homepage": "https://SashaMaslak.github.io/Phonebook-react",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.3",
